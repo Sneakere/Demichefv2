@@ -1,3 +1,53 @@
-console.log('javascript')
-
-<header></header>
+<!-- Header.astro -->
+<script type="text/javascript">
+    function onToggleMenu(e) {
+        const navLinks = document.querySelector(".nav-links");
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[12%]");
+    }
+</script>
+<h2 class="flex justify-center bg-white border-b-2">
+    Demichef 👨🏻‍🍳 | Repostería a domicilio en Puerto Varas
+</h2>
+<header class="bg-white py-2">
+    <h3></h3>
+    <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div>
+            <img class="w-16" src="/logo.png" alt="" />
+        </div>
+        <div
+            class="nav-links -z-10 md:z-10 duration-500 md:static absolute bg-white md:min-h-fit min-h-[30vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+            <ul
+                class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+            >
+                <li>
+                    <button class="hover:text-pink-700 hover:border-indigo-500"
+                        >Inicio
+                    </button>
+                </li>
+                <li>
+                    <button class="hover:text-pink-700 hover:border-indigo-500"
+                        >Contacto
+                    </button>
+                </li>
+                <li>
+                    <button class="hover:text-pink-700 hover:border-indigo-500"
+                        >Productos
+                    </button>
+                </li>
+                <li>
+                    <button class="hover:text-pink-700 hover:border-indigo-500"
+                        >Servicios
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-6 md:hidden">
+            <ion-icon
+                onclick="onToggleMenu(this)"
+                name="menu"
+                class="text-3xl cursor-pointer"></ion-icon>
+        </div>
+    </nav>
+</header>

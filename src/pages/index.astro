@@ -1,10 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/header.astro";
+import Header from "../components/header.astro";
 ---
 
-<Layout title="Astro.">
+<Layout title="Astro">
+	<head>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+	</head>
 	<main>
-		<h1 class="text-white">Demichef</h1>
+		<Header />
 	</main>
 </Layout>
