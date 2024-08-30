@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <Layout title="Astro">
@@ -17,11 +18,11 @@ import Header from "../components/header.astro";
 	<main>
 		<Header />
 		<section
-			class="flex flex-col h-[50dvh] bg-blend-overlay bg-black/40 relative -z-20"
+			class="flex flex-col h-[50dvh] bg-blend-overlay bg-fixed bg-black/40 relative -z-20"
 			style="background-image: url(background-hero.jpg);"
 		>
 			<div class="flex-1 flex items-center">
-				<div class="hero-section text-black text-center mx-auto">
+				<div class="hero-section text-white text-center mx-auto">
 					<h1 class="text-6xl font-semibold">
 						Demichef | Panaderia Artesanal
 					</h1>
@@ -34,4 +35,5 @@ import Header from "../components/header.astro";
 		</section>
 		<section style="height: 1500px;"><h1>Hola</h1></section>
 	</main>
+	<Footer />
 </Layout>

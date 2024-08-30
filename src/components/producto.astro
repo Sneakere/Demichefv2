@@ -1,0 +1,110 @@
+---
+const { nombre, descripcion, p10, p15, p20, p30, imagen, tipo } = Astro.props;
+
+function obtenerClaseTipo(tipo) {
+    switch (tipo) {
+        case "Helada":
+            return "producto-helada";
+        case "Especial":
+            return "producto-especial";
+        default:
+            return "producto-normal";
+    }
+}
+---
+
+<section
+    class={`producto relative p-6 bg-white rounded-lg shadow-md mx-auto flex flex-col justify-between overflow-hidden group border-2 border-white ${obtenerClaseTipo(tipo)}`}
+>
+    <h2
+        class="min-h-20 text-2xl font-extrabold text-[#37271F] mb-4 relative z-10 transition-colors duration-300 group-hover:text-gray-900 group-hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.1)]"
+    >
+        {nombre}
+    </h2>
+    <p
+        class="producto-descripcion text-[#37271F] font-semibold mb-4 flex-grow relative z-10 transition-colors duration-300 group-hover:text-gray-900 group-hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]"
+    >
+        {descripcion}
+    </p>
+
+    <div class="precios grid grid-cols-2 gap-4 z-10">
+        <div class="precio-item flex justify-between items-center">
+            <span class="font-medium">10p</span>
+            <span class="text-lg font-semibold text-gray-800">${p10}</span>
+        </div>
+        <div class="precio-item flex justify-between items-center">
+            <span class="font-medium">15p</span>
+            <span class="text-lg font-semibold text-gray-800">${p15}</span>
+        </div>
+        <div class="precio-item flex justify-between items-center">
+            <span class="font-medium">20p</span>
+            <span class="text-lg font-semibold text-gray-800">${p20}</span>
+        </div>
+        <div class="precio-item flex justify-between items-center">
+            <span class="font-medium">30p</span>
+            <span class="text-lg font-semibold text-gray-800">${p30}</span>
+        </div>
+    </div>
+
+    <div
+        class="imagen-fondo absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500"
+        style={`background-image: url(${imagen});`}
+    >
+    </div>
+</section>
+
+<style>
+    .producto {
+        max-width: 350px;
+        min-height: 450px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.5rem;
+    }
+
+    .producto-descripcion {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 0.5rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        min-height: 160px;
+    }
+
+    .imagen-fondo {
+        filter: blur(1.5px);
+        transform: scale(1.2);
+    }
+
+    .producto:hover .imagen-fondo {
+        transform: scale(1);
+        filter: blur(1px);
+    }
+
+    .precios {
+        border-top: 1px solid #e2e8f0;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+
+    .precio-item {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 0.5rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+    }
+
+    .producto-normal:hover {
+        border: 2px solid #87452b;
+        background-color: #87452b;
+    }
+
+    .producto-helada:hover {
+        border: 2px solid #4aa7c0;
+        background-color: #e0f7fa;
+    }
+
+    .producto-especial:hover {
+        border: 2px solid #c08d4a;
+        background-color: #fff3e0;
+    }
+</style>

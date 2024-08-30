@@ -1,22 +1,23 @@
-<!-- Header.astro -->
 <script type="text/javascript">
     function onToggleMenu(e) {
         const navLinks = document.querySelector(".nav-links");
         e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("top-[12%]");
+        navLinks.classList.toggle("top-[90%]");
     }
 </script>
 
-<header class="bg-white py-2 md:fixed md:top-0 w-full">
+<header
+    class="bg-white pb-2 top-0 md:fixed md:top-0 w-full relative z-[88888888]"
+>
     <h2 class="flex justify-center bg-white border-b-2">
         Demichef 👨🏻‍🍳 | Repostería a domicilio en Puerto Varas
     </h2>
-    <nav class="flex justify-between items-center w-[92%] mx-auto">
+    <nav class="flex justify-between items-center w-[92%] mx-auto bg-white">
         <div>
             <img class="w-16 pt-2" src="/logo.png" alt="" />
         </div>
         <div
-            class="nav-links -z-10 md:z-20 duration-500 md:static absolute bg-white md:min-h-fit min-h-[30vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+            class="nav-links -z-[10] md:z-[10] duration-500 md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-135%] md:w-auto w-full flex items-center px-5 bg-white"
         >
             <ul
                 class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8"
