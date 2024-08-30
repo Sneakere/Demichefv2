@@ -1,3 +1,7 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
 <script type="text/javascript">
     function onToggleMenu(e) {
         const navLinks = document.querySelector(".nav-links");
@@ -7,7 +11,7 @@
 </script>
 
 <header
-    class="bg-white pb-2 top-0 md:fixed md:top-0 w-full relative z-[88888888]"
+    class="bg-white pb-2 top-0 md:fixed md:top-0 relative z-[88888888] min-w-[100dvw]"
 >
     <h2 class="flex justify-center bg-white border-b-2">
         Demichef 👨🏻‍🍳 | Repostería a domicilio en Puerto Varas
@@ -17,34 +21,39 @@
             <img class="w-16 pt-2" src="/logo.png" alt="" />
         </div>
         <div
-            class="nav-links -z-[10] md:z-[10] duration-500 md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-135%] md:w-auto w-full flex items-center px-5 bg-white"
+            class="nav-links -z-[10] md:z-[10] duration-500 md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-135%] md:w-auto w-full flex items-center px-4 bg-white"
         >
             <ul
                 class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8"
             >
                 <li
-                    class="md:p-2 flex-1 text-center hover:text-white hover:bg-[#c9b4a2] cursor-pointer"
+                    class={`md:p-2 flex-1 text-center cursor-pointer nav-page ${currentPath === "/" ? "active" : ""}`}
                 >
-                    Inicio
+                    <a href="/">Inicio</a>
                 </li>
                 <li
-                    class="md:p-2 flex-1 text-center hover:text-white hover:bg-[#c9b4a2] cursor-pointer"
+                    class={`md:p-2 flex-1 text-center cursor-pointer nav-page ${currentPath === "/contacto" ? "active" : ""}`}
                 >
-                    Contacto
+                    <a href="/contacto">Contacto</a>
                 </li>
                 <li
-                    class="md:p-2 flex-1 text-center hover:text-white hover:bg-[#c9b4a2] cursor-pointer"
+                    class={`md:p-2 flex-1 text-center cursor-pointer nav-page ${currentPath === "/productos" ? "active" : ""}`}
                 >
-                    Productos
+                    <a href="/productos">Productos</a>
                 </li>
                 <li
-                    class="md:p-2 flex-1 text-center hover:text-white hover:bg-[#c9b4a2] cursor-pointergi"
+                    class={`md:p-2 flex-1 text-center cursor-pointer nav-page ${currentPath === "/servicios" ? "active" : ""}`}
                 >
-                    Servicios
+                    <a href="/servicios">Servicios</a>
                 </li>
             </ul>
         </div>
-        <div class="flex items-center gap-6 md:hidden">
+        <div
+            class="flex
+                        items-center
+                        gap-6
+                        md:hidden"
+        >
             <ion-icon
                 onclick="onToggleMenu(this)"
                 name="menu"
@@ -52,3 +61,10 @@
         </div>
     </nav>
 </header>
+
+<style>
+    .active {
+        color: #c9b4a2;
+        font-weight: bold;
+    }
+</style>
