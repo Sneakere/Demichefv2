@@ -1,5 +1,6 @@
 ---
 const currentPath = Astro.url.pathname;
+console.log(currentPath);
 ---
 
 <script type="text/javascript">
@@ -8,6 +9,7 @@ const currentPath = Astro.url.pathname;
         e.name = e.name === "menu" ? "close" : "menu";
         navLinks.classList.toggle("top-[90%]");
     }
+    console.log(currentPath);
 </script>
 
 <header
