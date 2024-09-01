@@ -34,76 +34,69 @@ import {
 
     <body>
         <Header />
-        <div class="md:pt-40 pb-3 bg-transparent">
-            <div
-                class="max-w-[350px] mx-auto flex items-center flex-col justify-center gap-5"
-            >
-                <h3 class="text-6xl font-bold pb-2">Tortas</h3>
-            </div>
-            <div
-                class="grid md:grid-cols-2 md:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2 xl:gap-4 gap-3 md:w-11/12 xl:w-2/3 mx-auto border-b-2 pb-3"
-            >
-                <div class="max-w-[350px] mx-auto">
-                    <Producto {...TortaRascaAmor} />
-                </div>
-                <div class="max-w-[350px] mx-auto">
-                    <Producto {...TortaMoka} />
-                </div>
-                <div class="max-w-[350px] mx-auto">
-                    <Producto {...TortaTresLeches} />
-                </div>
-                <div class="max-w-[350px] mx-auto">
-                    <Producto {...TortaTresLechesChocolate} />
-                </div>
-                <div class="max-w-[350px] mx-auto">
-                    <Producto {...TortaChocolate} />
-                </div>
-                <div class="max-w-[350px] mx-auto">
-                    <Producto {...TortaArandanoLimon} />
-                </div>
-            </div>
-        </div>
-        <!-- <div class="w-2/3 mx-auto pb-3">
-            <div class="grid md:grid-cols-2 gap-4 border-b-2 pb-3">
+        <section
+            class="bg-contain"
+            style="background-image: url(background-productos.jpg);"
+        >
+            <div class="md:pt-40 pb-3">
                 <div
                     class="max-w-[350px] mx-auto flex items-center flex-col justify-center gap-5"
                 >
-                    <h3 class="text-6xl font-bold">Tortas</h3>
-                    <p class="text-3xl font-semibold">Base hojarasca</p>
+                    <h3 class="text-6xl font-bold pb-2 text-white">Tortas</h3>
                 </div>
-                <div>
-                    <Producto {...TortaRascaAmor} />
-                </div>
-            </div>
-        </div> -->
-        <div class="md:w-11/12 xl:w-2/3 mx-auto pb-3">
-            <div
-                class="grid md:grid-cols-2 md:grid-rows-2 xl:grid-cols-3 xl:grid-rows-1 gap-4 border-b-2 pb-3"
-                style="grid-template-rows: minmax(100px, auto) repeat(1, minmax(0, 1fr));"
-            >
                 <div
-                    class="max-w-[350px] mx-auto flex items-center flex-col justify-center gap-5 md:col-span-2 xl:col-span-1"
+                    class="grid md:grid-cols-2 md:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2 xl:gap-4 gap-3 md:w-11/12 xl:w-2/3 mx-auto border-b-2 pb-3"
                 >
-                    <h3 class="text-6xl font-bold">Tortas</h3>
-                    <p class="text-3xl font-semibold">Heladas de merengue</p>
-                </div>
-                <div>
-                    <Producto {...TortaHMFrambuesa} />
-                </div>
-                <div>
-                    <Producto {...TortaHMLucuma} />
+                    <div class="max-w-[350px] mx-auto">
+                        <Producto {...TortaRascaAmor} />
+                    </div>
+                    <div class="max-w-[350px] mx-auto">
+                        <Producto {...TortaMoka} />
+                    </div>
+                    <div class="max-w-[350px] mx-auto">
+                        <Producto {...TortaTresLeches} />
+                    </div>
+                    <div class="max-w-[350px] mx-auto">
+                        <Producto {...TortaTresLechesChocolate} />
+                    </div>
+                    <div class="max-w-[350px] mx-auto">
+                        <Producto {...TortaChocolate} />
+                    </div>
+                    <div class="max-w-[350px] mx-auto">
+                        <Producto {...TortaArandanoLimon} />
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- TORTAS ESPECIALES -->
-        <div class="md:w-11/12 xl:w-2/3 mx-auto pb-3">
-            <div
-                class="grid md:grid-cols-2 md:grid-rows-2 xl:grid-cols-2 xl:grid-rows-3 gap-4"
-                style="grid-template-rows: minmax(100px, auto) repeat(1, minmax(0, 1fr));"
-            >
+            <div class="md:w-11/12 xl:w-2/3 mx-auto pb-3">
                 <div
-                    class="max-w-[350px]
+                    class="grid md:grid-cols-2 md:grid-rows-2 xl:grid-cols-3 xl:grid-rows-1 gap-4 border-b-2 pb-3"
+                    style="grid-template-rows: minmax(100px, auto) repeat(1, minmax(0, 1fr));"
+                >
+                    <div
+                        class="max-w-[350px] mx-auto flex items-center flex-col justify-center gap-5 md:col-span-2 xl:col-span-1"
+                    >
+                        <h3 class="text-6xl font-bold text-white">Tortas</h3>
+                        <p class="text-3xl font-semibold text-white">
+                            Heladas de merengue
+                        </p>
+                    </div>
+                    <div>
+                        <Producto {...TortaHMFrambuesa} />
+                    </div>
+                    <div>
+                        <Producto {...TortaHMLucuma} />
+                    </div>
+                </div>
+            </div>
+
+            <!-- TORTAS ESPECIALES -->
+            <div class="md:w-11/12 xl:w-2/3 mx-auto pb-3">
+                <div
+                    class="grid md:grid-cols-2 md:grid-rows-2 xl:grid-cols-2 xl:grid-rows-3 gap-4"
+                    style="grid-template-rows: minmax(100px, auto) repeat(1, minmax(0, 1fr));"
+                >
+                    <div
+                        class="max-w-[350px]
                 mx-auto
                 flex
                 items-center
@@ -112,19 +105,22 @@ import {
                 gap-5
                 pb-3
                 xl:col-span-3"
-                >
-                    <h3 class="text-6xl font-bold">Tortas</h3>
-                    <p class="text-3xl font-semibold">Especiales</p>
+                    >
+                        <h3 class="text-6xl font-bold text-white">Tortas</h3>
+                        <p class="text-3xl font-semibold text-white">
+                            Especiales
+                        </p>
+                    </div>
+                    <div>
+                        <Producto {...TortaEZabahoria} />
+                    </div>
+                    <div>
+                        <Producto {...TortaEMixta} />
+                    </div>
+                    <div><Producto {...TortaECastana} /></div>
                 </div>
-                <div>
-                    <Producto {...TortaEZabahoria} />
-                </div>
-                <div>
-                    <Producto {...TortaEMixta} />
-                </div>
-                <div><Producto {...TortaECastana} /></div>
             </div>
-        </div>
-        <Footer />
+            <Footer />
+        </section>
     </body>
 </html>
