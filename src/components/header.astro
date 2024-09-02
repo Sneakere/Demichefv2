@@ -7,6 +7,10 @@ const currentPath = Astro.url.pathname;
         const navLinks = document.querySelector(".nav-links");
         e.name = e.name === "menu" ? "close" : "menu";
         navLinks.classList.toggle("top-[90%]");
+        res_menu.setAttribute(
+            "src",
+            e.name === "menu" ? "/Close_icon.svg" : "/Hamburger_icon.svg",
+        );
     }
     window.addEventListener("scroll", function () {
         const bg_navbar = document.querySelectorAll(".cambia");
@@ -35,40 +39,36 @@ const currentPath = Astro.url.pathname;
         Demichef 👨🏻‍🍳 | Repostería a domicilio en Puerto Varas
     </h2>
     <nav
-        class="flex justify-between items-center w-[92%] mx-auto bg-white md:bg-transparent cambia cambia"
+        class="flex justify-between items-center md:w-[92%] px-6 md:px-0 mx-auto bg-white md:bg-transparent cambia"
     >
         <div>
-            <img
-                class="logo_nav w-20 pt-2"
-                src="public/logo_footer_svg.svg"
-                alt=""
-            />
+            <img class="logo_nav w-20 pt-2" src="/logo_footer_svg.svg" alt="" />
         </div>
         <div
-            class="nav-links -z-[10] md:z-[10] md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-135%] md:w-auto w-full flex items-center px-4 bg-white md:bg-transparent cambia"
+            class="nav-links ease-in-out duration-500 md:duration-0 -z-[10] md:z-[10] md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-135%] md:w-auto w-full flex items-center px-4 bg-white md:bg-transparent cambia"
         >
             <ul
-                class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8"
+                class="flex md:flex-row flex-col justify-start md:gap-[2vw] gap-8 md:items-center w-full"
             >
                 <li
-                    class={`md:p-2 flex-1 text-center cursor-pointer nav-page ${currentPath === "/" ? "active" : ""}`}
+                    class={`md:p-2 flex-1 cursor-pointer w-full text-start nav-page ${currentPath === "/" ? "active" : ""}`}
                 >
                     <a href="/">Inicio</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1 text-center cursor-pointer nav-page ${currentPath === "/contacto" ? "active" : ""}`}
+                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/contacto" ? "active" : ""}`}
                 >
                     <a href="/contacto">Contacto</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1 text-center cursor-pointer nav-page ${currentPath === "/productos" ? "active" : ""}`}
+                    class={`md:p-2 flex-1 r cursor-pointer w-full text-start nav-page ${currentPath === "/productos" ? "active" : ""}`}
                 >
                     <a href="/productos">Productos</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1 text-center cursor-pointer nav-page ${currentPath === "/servicios" ? "active" : ""}`}
+                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/servicios" ? "active" : ""}`}
                 >
-                    <a href="/servicios">Servicios</a>
+                    <a href="/servicios">Horarios</a>
                 </li>
             </ul>
         </div>
@@ -78,10 +78,13 @@ const currentPath = Astro.url.pathname;
                         gap-6
                         md:hidden"
         >
-            <ion-icon
+            <img
+                id="res_menu"
                 onclick="onToggleMenu(this)"
-                name="menu"
-                class="text-3xl cursor-pointer"></ion-icon>
+                class="cursor-pointer w-8 h-12"
+                src="/Hamburger_icon.svg"
+                alt=""
+            />
         </div>
     </nav>
 </header>
@@ -90,20 +93,23 @@ const currentPath = Astro.url.pathname;
     .active {
         color: #c9b4a2;
         font-weight: bold;
+        text-align: center;
+        border-bottom: #c9b4a2 1px solid;
     }
     .conScroll {
         background-color: white;
 
         color: black;
     }
-    .logo_nav {
-        /* blanco */
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
-            brightness(100%) contrast(100%);
-    }
-    .logo_nav_scroll {
-        /* negro */
-        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
-            brightness(0%) contrast(100%);
+    @media (min-width: 640px) {
+        .logo_nav {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+                brightness(100%) contrast(100%);
+        }
+        .logo_nav_scroll {
+            /* negro */
+            filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
+                brightness(0%) contrast(100%);
+        }
     }
 </style>

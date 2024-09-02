@@ -2,9 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
+import "../styles/global.css";
 ---
 
-<Layout title="Astro">
+<Layout title="Demichef">
 	<head>
 		<script
 			type="module"
@@ -21,15 +22,36 @@ import Footer from "../components/footer.astro";
 			class="flex flex-col h-[100dvh] bg-blend-overlay bg-fixed bg-black/40 relative -z-20"
 			style="background-image: url(background-hero.jpg);"
 		>
-			<div class="flex-1 flex items-center">
-				<div class="hero-section text-white text-center mx-auto">
-					<h1 class="text-6xl font-semibold">
-						Demichef | Panaderia Artesanal
-					</h1>
-					<p class="font-light text-3xl mt-5">
-						Emprendimiento de repostería artesanal y empanadas 👨‍🍳👩‍🍳 <br
-						/> NO mantenemos stock, solo a pedido.
-					</p>
+			<div class="flex-1 flex relative z-199 top-10 md:top-36">
+				<div
+					class="flex flex-col items-center hero-section text-white text-center mx-auto w-full gap-16"
+				>
+					<div class="flex flex-col items-center gap-8">
+						<h1 class="text-3xl font-light">
+							- Panaderia Artesanal -
+						</h1>
+						<img class="w-56" src="/logo.png" alt="" />
+						<!-- <h1 class="text-6xl font-bold tracking-widest border-b">
+						Demichef
+					</h1> -->
+					</div>
+					<div
+						class="flex justify-around items-center flex-col w-full bg-white text-[#202020] h-fit gap-y-10 py-6"
+					>
+						<h2 class="font-light text-4xl mt-5">
+							¡Delicias Artesanales a Pedido!
+						</h2>
+						<p class="md:w-2/3">
+							<span
+								class="font-semibold line-clamp-2 tracking-wide"
+							>
+								Emprendimiento dedicado a la repostería
+								artesanal y empanadas gourmet.</span
+							> Cada creación es elaborada especialmente para ti, ¡sin
+							stock disponible! Solo trabajamos bajo pedido para garantizar
+							la máxima frescura y calidad.
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>

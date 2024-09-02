@@ -2,6 +2,7 @@
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 ---
 
 <Layout title="Contacto">
@@ -11,41 +12,31 @@ import Layout from "../layouts/Layout.astro";
         style="background-image: url(background-contacto.jpg);"
     >
         <div
-            class="contacto flex flex-1 flex-col items-center justify-center backdrop-blur-[3px] z-0"
+            class="contacto flex flex-1 flex-col gap-4 items-center justify-center backdrop-blur-[3px] z-0"
         >
             <h1 class="text-white text-3xl tracking-widest">- CONTACTO -</h1>
             <p class="text-white text-xl font-semibold tracking-widest">
                 Contactanos por whatsapp al:
             </p>
             <div class="flex flex-col justify-center items-center gap-3 py-2">
-                <img
-                    class="w-10"
-                    src="/public/iconos_png/WhatsApp_icon.png"
-                    alt=""
-                />
+                <img class="w-10" src="iconos_png/WhatsApp_icon.png" alt="" />
                 <p class="text-white text-2xl font-semibold tracking-[.25em]">
                     +56978158837
                 </p>
             </div>
             <div class="flex items-center gap-3">
-                <img
-                    class="w-10"
-                    src="/public/iconos_png/Instagram_icon.png"
-                    alt=""
-                />
+                <img class="w-10" src="iconos_png/Instagram_icon.png" alt="" />
                 <p class="text-white text-2xl font-semibold tracking-[.25em]">
                     @Demichefpv
                 </p>
             </div>
-            <div>
-                <p class="text-white">
-                    O escribanos a <span class="text-xl font-semibold"
-                        >demichefpuertovaras@gmail.com</span
-                    >
-                </p>
+            <div class="flex flex-col items-center gap-5">
+                <p class="text-white">O escribanos a:</p>
+                <span class="text-xl font-semibold text-white"
+                    >demichefpuertovaras@gmail.com</span
+                >
             </div>
         </div>
     </section>
-    <div style="height: 1050px;"></div>
     <Footer />
 </Layout>
