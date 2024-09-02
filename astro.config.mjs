@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://sneakere.github.io',
-  base: '/',
+  site: 'https://sneakere.github.io/',
+  base: '/Demichefv2',
 });
