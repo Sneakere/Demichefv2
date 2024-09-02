@@ -9,7 +9,7 @@ const currentPath = Astro.url.pathname;
         navLinks.classList.toggle("top-[90%]");
         res_menu.setAttribute(
             "src",
-            e.name === "menu" ? "/Close_icon.svg" : "/Hamburger_icon.svg",
+            e.name === "menu" ? "Close_icon.svg" : "Hamburger_icon.svg",
         );
     }
     window.addEventListener("scroll", function () {
