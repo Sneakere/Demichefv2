@@ -25,9 +25,9 @@ console.log(base);
         </svg>
     `;
 
-        e.innerHTML = e.innerHTML.includes("icon-tabler-menu-2")
-            ? closeIcon
-            : menuIcon;
+        e.innerHTML = e.innerHTML.includes("icon-tabler-x")
+            ? menuIcon
+            : closeIcon;
     }
     window.addEventListener("scroll", function () {
         const bg_navbar = document.querySelectorAll(".cambia");
