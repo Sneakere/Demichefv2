@@ -5,7 +5,7 @@ export const TortaMoka = {
     p15: 25900,
     p20: 31300,
     p30: 42000,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Normal"
 };
 
@@ -16,7 +16,7 @@ export const TortaTresLeches = {
     p15: 28600,
     p20: 37800,
     p30: 47500,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Normal"
 };
 
@@ -27,7 +27,7 @@ export const TortaTresLechesChocolate = {
     p15: 31300,
     p20: 41000,
     p30: 50000,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Normal"
 };
 
@@ -38,7 +38,7 @@ export const TortaChocolate = {
     p15: 25900,
     p20: 31300,
     p30: 42000,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Normal"
 };
 
@@ -49,7 +49,7 @@ export const TortaArandanoLimon = {
     p15: 28600,
     p20: 39900,
     p30: 50700,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Normal"
 };
 
@@ -60,7 +60,7 @@ export const TortaRascaAmor = {
     p15: 28600,
     p20: 39900,
     p30: 50700,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Normal"
 };
 
@@ -71,7 +71,7 @@ export const TortaHMFrambuesa = {
     p15: 28600,
     p20: 39900,
     p30: 51800,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Helada"
 };
 
@@ -82,7 +82,7 @@ export const TortaHMLucuma = {
     p15: 28600,
     p20: 39900,
     p30: 51800,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Helada"
 };
 
@@ -93,7 +93,7 @@ export const TortaEZabahoria = {
     p15: 34500,
     p20: 44200,
     p30: 59400,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Especial"
 };
 
@@ -104,7 +104,7 @@ export const TortaEMixta = {
     p15: 27000,
     p20: 37200,
     p30: 52000,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Especial"
 };
 
@@ -115,6 +115,6 @@ export const TortaECastana = {
     p15: 28600,
     p20: 39900,
     p30: 51800,
-    imagen: "productos/torta_amor.jpg",
+    imagen: "torta_amor.jpg",
     tipo: "Especial"
 };

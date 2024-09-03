@@ -1,5 +1,8 @@
 ---
 const currentPath = Astro.url.pathname;
+console.log(currentPath);
+const base = import.meta.env.BASE_URL || "";
+console.log(base);
 ---
 
 <script type="text/javascript">
@@ -9,7 +12,9 @@ const currentPath = Astro.url.pathname;
         navLinks.classList.toggle("top-[90%]");
         res_menu.setAttribute(
             "src",
-            e.name === "menu" ? "Close_icon.svg" : "Hamburger_icon.svg",
+            e.name === "menu"
+                ? "/Demichefv2/Close_icon.svg"
+                : "/Demichefv2/Hamburger_icon.svg",
         );
     }
     window.addEventListener("scroll", function () {
@@ -42,7 +47,11 @@ const currentPath = Astro.url.pathname;
         class="flex justify-between items-center md:w-[92%] px-6 md:px-0 mx-auto bg-white md:bg-transparent cambia"
     >
         <div>
-            <img class="logo_nav w-20 pt-2" src="logo_footer_svg.svg" alt="" />
+            <img
+                class="logo_nav w-20 pt-2"
+                src="/Demichefv2/logo_footer_svg.svg"
+                alt=""
+            />
         </div>
         <div
             class="nav-links ease-in-out duration-500 md:duration-0 -z-[10] md:z-[10] md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-135%] md:w-auto w-full flex items-center px-4 bg-white md:bg-transparent cambia"
@@ -53,22 +62,22 @@ const currentPath = Astro.url.pathname;
                 <li
                     class={`md:p-2 flex-1 cursor-pointer w-full text-start nav-page ${currentPath === "/" ? "active" : ""}`}
                 >
-                    <a href="/">Inicio</a>
+                    <a href={`${base}`}>Inicio</a>
                 </li>
                 <li
                     class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/contacto" ? "active" : ""}`}
                 >
-                    <a href="/contacto">Contacto</a>
+                    <a href={`${base}contacto/`}>Contacto</a>
                 </li>
                 <li
                     class={`md:p-2 flex-1 r cursor-pointer w-full text-start nav-page ${currentPath === "/productos" ? "active" : ""}`}
                 >
-                    <a href="/productos">Productos</a>
+                    <a href={`${base}productos/`}>Productos</a>
                 </li>
                 <li
                     class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/servicios" ? "active" : ""}`}
                 >
-                    <a href="/servicios">Horarios</a>
+                    <a href={`${base}horarios/`}>Productos</a>
                 </li>
             </ul>
         </div>
@@ -82,7 +91,7 @@ const currentPath = Astro.url.pathname;
                 id="res_menu"
                 onclick="onToggleMenu(this)"
                 class="cursor-pointer w-8 h-12"
-                src="/Hamburger_icon.svg"
+                src="Hamburger_icon.svg"
                 alt=""
             />
         </div>

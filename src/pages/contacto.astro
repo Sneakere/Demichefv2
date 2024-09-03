@@ -1,15 +1,14 @@
 ---
-import Header from "../components/header.astro";
-import Footer from "../components/footer.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+const base = import.meta.env.BASE_URL || "";
+console.log(base);
 ---
 
 <Layout title="Contacto">
-    <Header />
     <section
         class="flex flex-col h-[100dvh] bg-blend-overlay bg-fixed bg-black/40 relative"
-        style="background-image: url(background-contacto.jpg);"
+        style="background-image: url(/public/background-contacto.jpg);"
     >
         <div
             class="contacto flex flex-1 flex-col gap-4 items-center justify-center backdrop-blur-[3px] z-0"
@@ -19,13 +18,13 @@ import "../styles/global.css";
                 Contactanos por whatsapp al:
             </p>
             <div class="flex flex-col justify-center items-center gap-3 py-2">
-                <img class="w-10" src="iconos_png/WhatsApp_icon.png" alt="" />
+                <img class="w-10" src="/public/Whatsapp_icon.png" alt="" />
                 <p class="text-white text-2xl font-semibold tracking-[.25em]">
                     +56978158837
                 </p>
             </div>
             <div class="flex items-center gap-3">
-                <img class="w-10" src="iconos_png/Instagram_icon.png" alt="" />
+                <img class="w-10" src="/public/Instagram_icon.png" alt="" />
                 <p class="text-white text-2xl font-semibold tracking-[.25em]">
                     @Demichefpv
                 </p>
@@ -38,5 +37,4 @@ import "../styles/global.css";
             </div>
         </div>
     </section>
-    <Footer />
 </Layout>
