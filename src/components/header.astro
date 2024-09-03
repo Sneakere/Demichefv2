@@ -8,14 +8,26 @@ console.log(base);
 <script type="text/javascript">
     function onToggleMenu(e) {
         const navLinks = document.querySelector(".nav-links");
-        e.name = e.name === "menu" ? "close" : "menu";
         navLinks.classList.toggle("top-[90%]");
-        res_menu.setAttribute(
-            "src",
-            e.name === "menu"
-                ? "/Demichefv2/Close_icon.svg"
-                : "/Demichefv2/Hamburger_icon.svg",
-        );
+        const menuIcon = `
+        <svg class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+        </svg>
+    `;
+        const closeIcon = `
+        <svg class="icon icon-tabler icon-tabler-x" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+        </svg>
+    `;
+
+        e.innerHTML = e.innerHTML.includes("icon-tabler-menu-2")
+            ? closeIcon
+            : menuIcon;
     }
     window.addEventListener("scroll", function () {
         const bg_navbar = document.querySelectorAll(".cambia");
@@ -62,22 +74,22 @@ console.log(base);
                 <li
                     class={`md:p-2 flex-1 cursor-pointer w-full text-start nav-page ${currentPath === "/" ? "active" : ""}`}
                 >
-                    <a href={`${base}`}>Inicio</a>
+                    <a href="/">Inicio</a>
                 </li>
                 <li
                     class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/contacto" ? "active" : ""}`}
                 >
-                    <a href={`${base}/contacto`}>Contacto</a>
+                    <a href="/contacto">Contacto</a>
                 </li>
                 <li
                     class={`md:p-2 flex-1 r cursor-pointer w-full text-start nav-page ${currentPath === "/productos" ? "active" : ""}`}
                 >
-                    <a href={`${base}/productos`}>Productos</a>
+                    <a href="/productos">Productos</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/servicios" ? "active" : ""}`}
+                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/horarios" ? "active" : ""}`}
                 >
-                    <a href={`${base}/horarios`}>Productos</a>
+                    <a href="/horarios">Horarios</a>
                 </li>
             </ul>
         </div>
@@ -87,13 +99,22 @@ console.log(base);
                         gap-6
                         md:hidden"
         >
-            <img
+            <svg
                 id="res_menu"
                 onclick="onToggleMenu(this)"
-                class="cursor-pointer w-8 h-12"
-                src="Hamburger_icon.svg"
-                alt=""
-            />
+                class="cursor-pointer w-8 h-12 icon icon-tabler icon-tabler-menu-2"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 6l16 0"></path>
+                <path d="M4 12l16 0"></path>
+                <path d="M4 18l16 0"></path>
+            </svg>
         </div>
     </nav>
 </header>
