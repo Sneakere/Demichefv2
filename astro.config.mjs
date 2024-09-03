@@ -15,5 +15,5 @@ const isProduction = process.env.NODE_ENV === 'production';
 export default defineConfig({
   integrations: [tailwind()],
   site: isProduction ? 'https://sneakere.github.io/Demichefv2/' : '',
-  base: isProduction ? '/Demichefv2' : '/',
+  base: isProduction ? '/Demichefv2/' : '/',
 });
