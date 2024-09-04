@@ -1,7 +1,7 @@
 ---
 const currentPath = Astro.url.pathname;
 console.log(currentPath);
-const base = import.meta.env.BASE_URL || "";
+const base = import.meta.env.BASE_URL || "/";
 console.log(`imprimiendo: ${base}`);
 ---
 
@@ -80,19 +80,19 @@ console.log(`imprimiendo: ${base}`);
                     class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/contacto" ? "active" : ""}`}
                 >
                     <!-- <a href="./contacto">Contacto</a> -->
-                    <a href={`${base}/contacto`}>Contacto</a>
+                    <a href={`${base}contacto`}>Contacto</a>
                 </li>
                 <li
                     class={`md:p-2 flex-1 r cursor-pointer w-full text-start nav-page ${currentPath === "/productos" ? "active" : ""}`}
                 >
                     <!-- <a href="./productos">Productos</a> -->
-                    <a href={`${base}/productos`}>Productos</a>
+                    <a href={`${base}productos`}>Productos</a>
                 </li>
                 <li
                     class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/horarios" ? "active" : ""}`}
                 >
                     <!-- <a href="./horarios">Horarios</a> -->
-                    <a href={`${base}/horarios`}>Horarios</a>
+                    <a href={`${base}horarios`}>Horarios</a>
                 </li>
             </ul>
         </div>
