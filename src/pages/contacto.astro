@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const base = import.meta.env.BASE_URL || "";
+console.log(base);
 ---
 
 <Layout title="Contacto">
@@ -8,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
         style="background-image: url(/Demichefv2/background-contacto.jpg);"
     >
         <div
-            class="contacto flex flex-1 flex-col gap-4 items-center justify-center backdrop-blur-[3px] z-0"
+            class="contacto flex flex-1 flex-col gap-4 items-center pt-32 md:pt-0 md:justify-center backdrop-blur-[3px] z-0 md:pd-32"
         >
             <h1 class="text-white text-3xl tracking-widest">- CONTACTO -</h1>
             <p class="text-white text-xl font-semibold tracking-widest">
