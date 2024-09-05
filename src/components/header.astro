@@ -74,17 +74,17 @@ const base = import.meta.env.BASE_URL || "/";
                     <a href={`${base}`}>Inicio</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/contacto" ? "active" : ""}`}
+                    class={`md:p-2 flex-1 cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/contacto" || currentPath === "/Demichefv2/contacto/" ? "active" : ""}`}
                 >
                     <a href={`${base}contacto`}>Contacto</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1 r cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/productos" ? "active" : ""}`}
+                    class={`md:p-2 flex-1 cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/productos" || currentPath === "/Demichefv2/productos/" ? "active" : ""}`}
                 >
                     <a href={`${base}productos`}>Productos</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/horarios" ? "active" : ""}`}
+                    class={`md:p-2 flex-1 cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/horarios" || currentPath === "/Demichefv2/horarios/" ? "active" : ""}`}
                 >
                     <a href={`${base}horarios`}>Horarios</a>
                 </li>
