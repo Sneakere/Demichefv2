@@ -21,6 +21,11 @@ console.log(`En pagina contacto: ${base}`);
                 <p class="text-white text-2xl font-semibold tracking-[.25em]">
                     +56978158837
                 </p>
+                <p
+                    class="text-white text-2xl font-semibold tracking-[.25em]"
+                    id="env-base"
+                >
+                </p>
             </div>
             <div class="flex items-center gap-3">
                 <img class="w-10" src="/Demichefv2/Instagram_icon.png" alt="" />
@@ -35,5 +40,9 @@ console.log(`En pagina contacto: ${base}`);
                 >
             </div>
         </div>
+        <script>
+            document.getElementById("env-base").textContent =
+                `En página contacto: ${import.meta.env.BASE_URL}`;
+        </script>
     </section>
 </Layout>

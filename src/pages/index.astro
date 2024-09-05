@@ -24,6 +24,11 @@ console.log(`En pagina index: ${base}`);
 					<h2 class="font-light text-4xl mt-5">
 						¡Delicias Artesanales a Pedido!
 					</h2>
+					<p
+						class="text-black text-2xl font-semibold tracking-[.25em]"
+						id="env-base"
+					>
+					</p>
 					<p class="md:w-2/3">
 						<span class="font-semibold line-clamp-2 tracking-wide">
 							Emprendimiento dedicado a la repostería artesanal y
@@ -35,5 +40,9 @@ console.log(`En pagina index: ${base}`);
 				</div>
 			</div>
 		</div>
+		<script>
+			document.getElementById("env-base").textContent =
+				`En página indice: ${import.meta.env.BASE_URL}`;
+		</script>
 	</section>
 </Layout>
