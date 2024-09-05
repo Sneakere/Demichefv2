@@ -1,5 +1,6 @@
 ---
 const currentPath = Astro.url.pathname;
+console.log(currentPath);
 const base = import.meta.env.BASE_URL || "/";
 ---
 
@@ -44,11 +45,7 @@ const base = import.meta.env.BASE_URL || "/";
             logo_navbar.classList.remove("logo_nav_scroll");
         }
     });
-    // function activeLinkHeader() {
-    //     if ()
-    // }
 </script>
-
 <header
     class="bg-white md:bg-white/10 md:backdrop-blur-sm pb-2 top-0 md:fixed md:top-0 relative z-[88888888] min-w-[100dvw] md:text-white cambia"
 >
@@ -72,22 +69,22 @@ const base = import.meta.env.BASE_URL || "/";
                 class="flex md:flex-row flex-col justify-start md:gap-[2vw] gap-8 md:items-center w-full"
             >
                 <li
-                    class={`md:p-2 flex-1 cursor-pointer w-full text-start nav-page ${currentPath === "/" ? "active" : ""}`}
+                    class={`md:p-2 flex-1 cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/" ? "active" : ""}`}
                 >
                     <a href={`${base}`}>Inicio</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/contacto" ? "active" : ""}`}
+                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/contacto" ? "active" : ""}`}
                 >
                     <a href={`${base}contacto`}>Contacto</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1 r cursor-pointer w-full text-start nav-page ${currentPath === "/productos" ? "active" : ""}`}
+                    class={`md:p-2 flex-1 r cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/productos" ? "active" : ""}`}
                 >
                     <a href={`${base}productos`}>Productos</a>
                 </li>
                 <li
-                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/horarios" ? "active" : ""}`}
+                    class={`md:p-2 flex-1  cursor-pointer w-full text-start nav-page ${currentPath === "/Demichefv2/horarios" ? "active" : ""}`}
                 >
                     <a href={`${base}horarios`}>Horarios</a>
                 </li>
