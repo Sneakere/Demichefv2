@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Producto from "../components/producto.astro";
+// const base = import.meta.env.BASE_URL || "";
 // import "../styles/global.css";
 import {
     TortaMoka,
@@ -15,12 +16,13 @@ import {
     TortaEMixta,
     TortaECastana,
 } from "../data/todosproductos.js";
+console.log("Datos de TortaRascaAmor:", TortaMoka);
 ---
 
 <Layout title="Productos">
     <section
         class="bg-cover bg-no-repeat"
-        style="background-image: url(/Demichefv2/background-productos.jpg);"
+        style="background-image: url(background-productos.jpg);"
     >
         <div class="md:pt-40 pb-3">
             <div

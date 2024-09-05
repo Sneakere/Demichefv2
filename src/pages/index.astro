@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const base = import.meta.env.BASE_URL || "";
 // import "../styles/global.css";
 ---
 
 <Layout title="Demichef">
 	<section
 		class="flex flex-col h-[100dvh] bg-blend-overlay bg-fixed bg-black/40 relative -z-20"
-		style="background-image: url(background-hero.jpg);"
+		style={{ backgroundImage: `url(${base}background-hero.jpg)` }}
 	>
 		<div class="flex-1 flex relative z-199">
 			<div

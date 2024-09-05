@@ -1,6 +1,6 @@
 ---
 const { nombre, descripcion, p10, p15, p20, p30, imagen, tipo } = Astro.props;
-
+const base = import.meta.env.BASE_URL || "";
 function obtenerClaseTipo(tipo) {
     switch (tipo) {
         case "Helada":
@@ -48,7 +48,7 @@ function obtenerClaseTipo(tipo) {
 
     <div
         class="imagen-fondo absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500"
-        style={`background-image: url(/Demichefv2/${imagen});`}
+        style={`background-image: url(${base}${imagen});`}
     >
     </div>
 </section>
